@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exameets</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="top-line">
+            <p>...Exameets is a one-step platform for students, where all the needs are met...</p>
+        </div>
+
+        <div class="logo-menu">
+            <div class="logo">
+                <img src="../Images/logo.jpg" alt="Exameets Logo">
+            </div>
+            <!-- Hamburger Icon (visible only on mobile) -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Close Icon (visible only when mobile menu is open) -->
+            <div class="close-menu" id="closeMenu" style="display: none;">&times;</div>
+            <!-- Main Navigation -->
+            <nav class="menu" id="menu">
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Home_Icon.svg" alt="Home"></div>
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="menu-item govt-job-container">
+                    <div class="icon-circle"><img src="../Images/Govt_Icon.svg" alt="Govt Jobs"></div>
+                    <a href="#">Govt Jobs</a>
+                    <div class="dropdown">
+                        <a href="../Govt_Jobs_Page/index.html">Govt Jobs</a>
+                        <a href="../Admit_Card/index.html">Admit Card</a>
+                        <a href="../Result_Page/index.html">Result</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Tech_Icon.svg" alt="Tech Jobs"></div>
+                    <a href="../Tech_Jobs_Page/index.html">Tech Jobs</a>
+                </div>
+                <div class="menu-item internship-container">
+                    <div class="icon-circle"><img src="../Images/Intern_Icon.svg" alt="Internships"></div>
+                    <a href="#">Internships</a>
+                    <div class="dropdown">
+                        <a href="../Internships_Page/index.html">Internships</a>
+                        <a href="../Scholarships_Page/">Scholarships</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Admission_Icon.svg" alt="Admissions"></div>
+                    <a href="../Admissions_Page/index.html">Admissions</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/PYQ_Icon.svg" alt="PYQ"></div>
+                    <a href="../PYQ_Page/index.html">PYQ</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Courses_Icon.svg" alt="Courses"></div>
+                    <a href="../Mentorships/index.html">Mentorship</a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="bottom-line">
+            <p>Register to get the notifications you need </p>
+            <div class="auth-links">
+                <a href="#" id="loginLink">Login</a>
+                <span class="thick-line">|</span>
+                <a href="../Sign-Up_Page-2/index.html">Register</a>
+            </div>
+        </div>
+
+
+    </header>
+
+
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="../Images/Anusha.jpg" alt="Profile Picture" />
+                </div>
+                <div class="profile-info">
+                    <h1>Mayaluri Anusha</h1>
+                    <h3>Developer</h3>
+                </div>
+            </div>
+            <div class="profile-body">
+                <p><strong>Duration:</strong> Jan 2023 - Present</p>
+                <p><strong>About:</strong> Anusha is a highly skilled developer specializing in frontend web development, with a focus on delivering user-friendly applications and efficient systems.</p>
+                <p><strong>Strenghts:</strong> Attention to detail, strong problem-solving skills, and a collaborative mindset.</p>
+                <div class="certificate-container">
+                    <p><strong>Certificate:</strong></p>
+                    <div class="certificate-box">Certificate will appear here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #283D50;
+        }
+    
+        .profile-container {
+            width: 60%;
+            margin: 40px auto;
+            background-color: #FFFFFF;
+            border: 1px solid #C0E3FF;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .profile-card {
+            text-align: center;
+        }
+    
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+    .profile-header {
+        flex-direction: column; /* Stack the contents vertically */
+    }
+}
+    
+        .profile-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid #015990;
+        }
+    
+        .profile-info h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #015990;
+        }
+    
+        .profile-info h3 {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            color: #283D50;
+        }
+    
+        .profile-body p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+    
+        .certificate-container {
+            margin-top: 20px;
+            text-align: left;
+        }
+    
+        .certificate-box {
+            width: 100%;
+            height: 200px;
+            background-color: #F0F8FF;
+            border: 1px dashed #C0E3FF;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: #015990;
+        }
+    </style>
+    
+
+
+
+
+    <!-- Modal for Login -->
+<div id="loginModal" class="modal1">
+    <div class="modal1-content">
+      <h2 class="welcome-message">Hi Dear, Welcome back</h2>
+      <input type="email" id="email" name="email" placeholder="Email" class="input-field" required><br>
+      <input type="password" id="password" name="password" placeholder="Password" class="input-field" required><br>
+      <a href="#" class="forgot-password">Forgot Password?</a><br>
+      <button id="loginBtn" class="login-btn">Login</button>
+    </div>
+  </div>
+  
+        <footer>
+            <div class="footer-container">
+
+                <div class="footer-title">
+                    <h1>Exameets</h1>
+                </div>
+    
+
+                <div class="footer-links">
+                    <a href="../Contact-Us/index.html">Contact Us</a> | 
+                    <a href="../About-Us/index.html">About Us</a> | 
+                    <a href="../Community/index.html">Community</a> | 
+                    <a href="../Privacy-Policy/index.html">Privacy Policy</a> | 
+                    <a href="../Our Team_Page/index.html">Our Team</a>
+                </div>
+    
+
+                <div class="footer-bottom">
+                    <div class="left-side">
+                        <p>&copy; 2024 Exameets. All Rights Reserved.</p>
+                    </div>
+                    <div class="middle-side">
+                        <p>Developed in Partnership with Ceeras</p>
+                    </div>
+                    <div class="right-side">
+                        <a href="#"><img src="../Images/WhatsApp_Icon.svg" alt="WAPP"></a>
+                        <a href="#"><img src="../Images/Facebook_Icon.svg" alt="FBOOK"></a>
+                        <a href="#"><img src="../Images/Instagram_Icon.svg" alt="IGRAM"></a>
+                        <a href="#"><img src="../Images/X_Twitter_Icon.svg" alt="X"></a>
+                        <a href="#"><img src="../Images/Linkedin_Icon.svg" alt="L"></a>
+                    </div>
+                </div>
+    
+
+                <div class="footer-quotes">
+                    <marquee behavior="scroll" direction="left">
+                        Success is not final, Failure is not final, It is the courage to continue that counts | 
+                        Success is not final, Failure is not final, It is the courage to continue that counts |
+                        Keep pushing forward, no matter the obstacles...
+                    </marquee>
+                </div>
+            </div>
+        </footer>
+        
+
+            
+        <!-- Script for Login Form Modal -->
+        <script>
+            var loginModal = document.getElementById("loginModal");
+
+
+            var loginLink = document.getElementById("loginLink");
+
+            loginLink.onclick = function() {
+                loginModal.style.display = "block";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == loginModal) {
+                    loginModal.style.display = "none";
+                }
+            }
+        </script>
+        
+
+
+
+
+
+        <!-- Script for Mobile Menu Toggle -->
+        <script>
+          const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+const closeMenu = document.getElementById('closeMenu');
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    hamburger.style.display = 'none';
+    closeMenu.style.display = 'block';
+});
+
+closeMenu.addEventListener('click', () => {
+    menu.classList.remove('show');
+    hamburger.style.display = 'flex';
+    closeMenu.style.display = 'none';
+});
+
+document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && event.target !== hamburger) {
+        menu.classList.remove('show');
+        hamburger.style.display = 'flex';
+        closeMenu.style.display = 'none';
+    }
+});
+        </script>
+</body>
+</html>

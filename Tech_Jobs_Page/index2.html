@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exameets</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+
+        <div class="top-line">
+            <p>...Exameets is a one-step platform for students, where all the needs are met...</p>
+        </div>
+
+        <div class="logo-menu">
+            <div class="logo">
+                <img src="../Images/logo.jpg" alt="Exameets Logo">
+            </div>
+            <!-- Hamburger Icon (visible only on mobile) -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Close Icon (visible only when mobile menu is open) -->
+            <div class="close-menu" id="closeMenu" style="display: none;">&times;</div>
+            <!-- Main Navigation -->
+            <nav class="menu" id="menu">
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Home_Icon.svg" alt="Home"></div>
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="menu-item govt-job-container">
+                    <div class="icon-circle"><img src="../Images/Govt_Icon.svg" alt="Govt Jobs"></div>
+                    <a href="#">Govt Jobs</a>
+                    <div class="dropdown">
+                        <a href="../Govt_Jobs_Page/index.html">Govt Jobs</a>
+                        <a href="../Admit_Card/index.html">Admit Card</a>
+                        <a href="../Result_Page/index.html">Result</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Tech_Icon.svg" alt="Tech Jobs"></div>
+                    <a href="../Tech_Jobs_Page/index.html">Tech Jobs</a>
+                </div>
+                <div class="menu-item internship-container">
+                    <div class="icon-circle"><img src="../Images/Intern_Icon.svg" alt="Internships"></div>
+                    <a href="#">Internships</a>
+                    <div class="dropdown">
+                        <a href="../Internships_Page/index.html">Internships</a>
+                        <a href="../Scholarships_Page/">Scholarships</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Admission_Icon.svg" alt="Admissions"></div>
+                    <a href="../Admissions_Page/index.html">Admissions</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/PYQ_Icon.svg" alt="PYQ"></div>
+                    <a href="../PYQ_Page/index.html">PYQ</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Courses_Icon.svg" alt="Courses"></div>
+                    <a href="../Mentorships/index.html">Mentorship</a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="bottom-line">
+            <p>Register to get the notifications you need </p>
+            <div class="auth-links">
+                <a href="#" id="loginLink">Login</a>
+                <span class="thick-line">|</span>
+                <a href="../Sign-Up_Page-2/index.html">Register</a>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <style>
+        .body {
+            background-color: #DFF1FF;
+            font-family: Arial, sans-serif;
+            color: #283D50;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .job-container {
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        .job-title {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: #015990;
+            margin-bottom: 20px;
+            
+        }
+    
+        .job-header {
+            display: flex;
+            margin-top: 30px;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: #015990;
+            border-bottom-style: solid;
+        }
+    
+        .job-header .job-name {
+            font-size: 2em;
+
+            font-weight: bold;
+            color: #015990;
+        }
+    
+        .company-name {
+            font-size: 1.5em;
+            color: #283D50;
+        }
+    
+        .job-meta {
+            margin-top: 30px;
+            display: flex;
+            border-color: #015990;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .job-meta, .job-footer{
+                flex-direction: column;
+                gap:10px;
+            }
+        }
+        .job-meta div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            padding: 8px;
+            background-color: #C0E3FF;
+            border-radius: 5px;
+            font-size: 1em;
+            flex: 0.2;
+        }
+
+        .job-meta div img {
+            width: 18px;
+            height: 18px;
+        }
+    
+        .job-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    
+        .job-footer div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            padding: 8px;
+            background-color: #C0E3FF;
+            border-radius: 5px;
+            font-size: 1em;
+            flex: 0.2;
+        }
+
+        .apply-button {
+            display: block;
+            background-color: #015990;
+            color: #FFFFFF;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            margin-top: 50px; /* Increased gap above the Apply Now button */
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.2em;
+            width: 150px;
+            text-align: center;
+        }
+    
+        .apply-button:hover {
+            background-color: #283D50;
+        }
+    
+        .job-description {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1em;
+            color: #283D50;
+        }
+        h3{
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+        p,li,ul{
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+h4{
+    font-size:20px;
+    margin-bottom: 15px;
+}
+    
+        .more-jobs-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #015990;
+            color: #FFFFFF;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    
+        .more-jobs-button:hover {
+            background-color: #283D50;
+        }
+    </style>
+</head>
+<div class="body">
+    <div class="job-container">
+    
+        <!-- Job Header -->
+        <div class="job-header">
+            <div class="job-name">Software Engineer</div>
+            <div class="company-name">Tech Solutions Inc.</div>
+        </div>
+    
+        <!-- Job Meta Information (Location, Experience, Posted Date) -->
+        <div class="job-meta">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <span>New York, USA</span>
+            </div>
+            <div>
+                <i class="fa fa-briefcase"></i>
+                <span>2-4 Years</span>
+            </div>
+            <div>
+                <i class="fa fa-calendar"></i>
+                <span>Posted 2 days ago</span>
+            </div>
+        </div>
+    
+        <!-- Job Footer (Education, Salary, Job Type) -->
+        <div class="job-footer">
+            <div>
+                <i class="fa fa-graduation-cap"></i>
+                <span>Bachelor's Degree</span>
+            </div>
+            <div>
+                <i class="fa fa-money"></i>
+                <span>$70,000 - $90,000</span>
+            </div>
+            <div>
+                <i class="fa fa-check-circle"></i>
+                <span>Full-Time</span>
+            </div>
+        </div>
+    
+        <!-- Apply Now Button -->
+        <a href="apply-now.html" class="apply-button">Apply Now</a>
+        
+        <!-- Job Description -->
+        <div class="job-description">
+            <h3>Job Description:</h3>
+            <p>
+                As a Software Engineer at Tech Solutions Inc., you will be responsible for developing high-quality software solutions,
+                working on exciting projects, and collaborating with a talented team. We are looking for someone with strong coding skills
+                and a passion for technology.
+            </p>
+            <p>
+                <h4>Key Responsibilities:</h4>
+                <ul>
+                    <li>Design, develop, and maintain software applications.</li>
+                    <li>Collaborate with cross-functional teams to define software requirements.</li>
+                    <li>Write clean, efficient, and maintainable code.</li>
+                    <li>Participate in code reviews and contribute to best practices.</li>
+                </ul>
+            </p>
+            <p>
+                <h4>Requirements:</h4>
+                <ul>
+                    <li>Proficiency in programming languages such as Java, Python, or C++.</li>
+                    <li>Experience with web development and cloud technologies.</li>
+                    <li>Strong problem-solving and debugging skills.</li>
+                    <li>Excellent communication and teamwork skills.</li>
+                </ul>
+            </p>
+        </div>
+    
+        <!-- More Jobs Button -->
+        <a href="index.html" class="more-jobs-button">More Jobs</a>
+    </div>
+</div>
+
+
+
+    <!-- Modal for Login -->
+<div id="loginModal" class="modal1">
+    <div class="modal1-content">
+      <h2 class="welcome-message">Hi Dear, Welcome back</h2>
+      <input type="email" id="email" name="email" placeholder="Email" class="input-field" required><br>
+      <input type="password" id="password" name="password" placeholder="Password" class="input-field" required><br>
+      <a href="#" class="forgot-password">Forgot Password?</a><br>
+      <button id="loginBtn" class="login-btn">Login</button>
+    </div>
+  </div>
+  
+        <footer>
+            <div class="footer-container">
+
+                <div class="footer-title">
+                    <h1>Exameets</h1>
+                </div>
+    
+
+                <div class="footer-links">
+                    <a href="../Contact-Us/index.html">Contact Us</a> | 
+                    <a href="../About-Us/index.html">About Us</a> | 
+                    <a href="../Community/index.html">Community</a> | 
+                    <a href="../Privacy-Policy/index.html">Privacy Policy</a> | 
+                    <a href="../Our Team_Page/index.html">Our Team</a>
+                </div>
+    
+
+                <div class="footer-bottom">
+                    <div class="left-side">
+                        <p>&copy; 2024 Exameets. All Rights Reserved.</p>
+                    </div>
+                    <div class="middle-side">
+                        <p>Developed in Partnership with Ceeras</p>
+                    </div>
+                    <div class="right-side">
+                        <a href="#"><img src="../Images/WhatsApp_Icon.svg" alt="WAPP"></a>
+                        <a href="#"><img src="../Images/Facebook_Icon.svg" alt="FBOOK"></a>
+                        <a href="#"><img src="../Images/Instagram_Icon.svg" alt="IGRAM"></a>
+                        <a href="#"><img src="../Images/X_Twitter_Icon.svg" alt="X"></a>
+                        <a href="#"><img src="../Images/Linkedin_Icon.svg" alt="L"></a>
+                    </div>
+                </div>
+    
+
+                <div class="footer-quotes">
+                    <marquee behavior="scroll" direction="left">
+                        Success is not final, Failure is not final, It is the courage to continue that counts | 
+                        Success is not final, Failure is not final, It is the courage to continue that counts |
+                        Keep pushing forward, no matter the obstacles...
+                    </marquee>
+                </div>
+            </div>
+        </footer>
+        
+
+            
+        <!-- Script for Login Form Modal -->
+        <script>
+            var loginModal = document.getElementById("loginModal");
+
+
+            var loginLink = document.getElementById("loginLink");
+
+            loginLink.onclick = function() {
+                loginModal.style.display = "block";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == loginModal) {
+                    loginModal.style.display = "none";
+                }
+            }
+        </script>
+        
+
+
+
+
+
+        <!-- Script for Mobile Menu Toggle -->
+        <script>
+          const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+const closeMenu = document.getElementById('closeMenu');
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    hamburger.style.display = 'none';
+    closeMenu.style.display = 'block';
+});
+
+closeMenu.addEventListener('click', () => {
+    menu.classList.remove('show');
+    hamburger.style.display = 'flex';
+    closeMenu.style.display = 'none';
+});
+
+document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && event.target !== hamburger) {
+        menu.classList.remove('show');
+        hamburger.style.display = 'flex';
+        closeMenu.style.display = 'none';
+    }
+});
+        </script>
+</body>
+</html>

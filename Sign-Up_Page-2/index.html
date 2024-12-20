@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exameets</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="top-line">
+            <p>...Exameets is a one-step platform for students, where all the needs are met...</p>
+        </div>
+
+        <div class="logo-menu">
+            <div class="logo">
+                <img src="../Images/logo.jpg" alt="Exameets Logo">
+            </div>
+            <!-- Hamburger Icon (visible only on mobile) -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Close Icon (visible only when mobile menu is open) -->
+            <div class="close-menu" id="closeMenu" style="display: none;">&times;</div>
+            <!-- Main Navigation -->
+            <nav class="menu" id="menu">
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Home_Icon.svg" alt="Home"></div>
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="menu-item govt-job-container">
+                    <div class="icon-circle"><img src="../Images/Govt_Icon.svg" alt="Govt Jobs"></div>
+                    <a href="#">Govt Jobs</a>
+                    <div class="dropdown">
+                        <a href="../Govt_Jobs_Page/index.html">Govt Jobs</a>
+                        <a href="../Admit_Card/index.html">Admit Card</a>
+                        <a href="../Result_Page/index.html">Result</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Tech_Icon.svg" alt="Tech Jobs"></div>
+                    <a href="../Tech_Jobs_Page/index.html">Tech Jobs</a>
+                </div>
+                <div class="menu-item internship-container">
+                    <div class="icon-circle"><img src="../Images/Intern_Icon.svg" alt="Internships"></div>
+                    <a href="#">Internships</a>
+                    <div class="dropdown">
+                        <a href="../Internships_Page/index.html">Internships</a>
+                        <a href="../Scholarships_Page/">Scholarships</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Admission_Icon.svg" alt="Admissions"></div>
+                    <a href="../Admissions_Page/index.html">Admissions</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/PYQ_Icon.svg" alt="PYQ"></div>
+                    <a href="../PYQ_Page/index.html">PYQ</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Courses_Icon.svg" alt="Courses"></div>
+                    <a href="../Mentorships/index.html">Mentorship</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="bottom-line">
+            <p>Register to get the notifications you need </p>
+            <div class="auth-links">
+                <a href="#" id="loginLink">Login</a>
+                <span class="thick-line">|</span>
+                <a href="../Sign-Up_Page-2/index.html">Register</a>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <div class="form">
+        <section class="sign-up-section">
+            <form id="otp-password-form" onsubmit="redirectToNextPage(event)">
+                <h2>Register</h2>
+
+                <div class="section">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter Full Name" required>
+                </div>
+
+                <div class="section">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" required>
+                </div>
+
+                <div class="section">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="" disabled selected></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="section">
+                    <label for="phone">Phone Number</label>
+                    <div class="phone-section">
+                        <select id="country-code" required>
+                            <option value="+91">+91</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <!-- Add more country codes as needed -->
+                        </select>
+                        <input type="tel" id="mobile-number" maxlength="10" pattern="\d{10}" placeholder="Enter 10-digit Mobile Number" required>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" placeholder="Enter Email" required>
+                </div>
+
+                <div class="otp-section">
+                    <label for="mobile-otp">Mobile OTP</label>
+                    <input type="text" id="mobile-otp" maxlength="6" pattern="\d{6}" placeholder="Enter Mobile OTP" required>
+                    <button type="button">Validate</button>
+                </div>
+
+                <div class="otp-section">
+                    <label for="email-otp">Email OTP</label>
+                    <input type="text" id="email-otp" maxlength="6" pattern="\d{6}" placeholder="Enter Email OTP" required>
+                    <button type="button">Validate</button>
+                </div>
+
+
+
+                <div class="password-section">
+                    <label>Create Password</label>
+                </div>
+                <div class="password-box">
+                    <input type="password" placeholder="Enter Password" required>
+                </div>
+
+                <div class="password-box">
+                    <input type="password" placeholder="Re-enter Password" required>
+                </div>
+
+                <div class="captcha-section">
+                    <input type="checkbox" required>
+                    <label>I am not a robot</label>
+                </div>
+
+                <button type="submit" class="next-btn">Next</button>
+            </form>
+        </section>
+    </div>
+
+
+    <script>
+    function redirectToNextPage(event) {
+        event.preventDefault(); // Prevent the default form submission
+        // Add any additional validation logic here if required
+        
+        // Redirect to the next page
+        window.location.href = "../Sign-Up_Page-3/index.html";
+    }
+</script>
+    
+        <footer>
+            <div class="footer-container">
+
+                <div class="footer-title">
+                    <h1>Exameets</h1>
+                </div>
+    
+
+                <div class="footer-links">
+                    <a href="../Contact-Us/index.html">Contact Us</a> | 
+                    <a href="../About-Us/index.html">About Us</a> | 
+                    <a href="../Community/index.html">Community</a> | 
+                    <a href="../Privacy-Policy/index.html">Privacy Policy</a> | 
+                    <a href="../Our Team_Page/index.html">Our Team</a>
+                </div>
+    
+
+                <div class="footer-bottom">
+                    <div class="left-side">
+                        <p>&copy; 2024 Exameets. All Rights Reserved.</p>
+                    </div>
+                    <div class="middle-side">
+                        <p>Developed in Partnership with Ceeras</p>
+                    </div>
+                    <div class="right-side">
+                        <a href="#"><img src="../Images/WhatsApp_Icon.svg" alt="WAPP"></a>
+                        <a href="#"><img src="../Images/Facebook_Icon.svg" alt="FBOOK"></a>
+                        <a href="#"><img src="../Images/Instagram_Icon.svg" alt="IGRAM"></a>
+                        <a href="#"><img src="../Images/X_Twitter_Icon.svg" alt="X"></a>
+                        <a href="#"><img src="../Images/Linkedin_Icon.svg" alt="L"></a>
+                    </div>
+                </div>
+    
+
+                <div class="footer-quotes">
+                    <marquee behavior="scroll" direction="left">
+                        Success is not final, Failure is not final, It is the courage to continue that counts | 
+                        Success is not final, Failure is not final, It is the courage to continue that counts |
+                        Keep pushing forward, no matter the obstacles...
+                    </marquee>
+                </div>
+            </div>
+        </footer>
+        
+
+        <!-- Script for Mobile Menu Toggle -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+  const closeMenu = document.getElementById('closeMenu');
+  
+  hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+      hamburger.style.display = 'none';
+      closeMenu.style.display = 'block';
+  });
+  
+  closeMenu.addEventListener('click', () => {
+      menu.classList.remove('show');
+      hamburger.style.display = 'flex';
+      closeMenu.style.display = 'none';
+  });
+  
+  document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target) && event.target !== hamburger) {
+          menu.classList.remove('show');
+          hamburger.style.display = 'flex';
+          closeMenu.style.display = 'none';
+      }
+  });
+          </script>
+            
+
+
+        
+</body>
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #015990;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .sign-up-section {
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        color: #025386;
+    }
+
+    .section {
+        margin-bottom: 15px;
+    }
+
+    .section label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .section input,
+    .section select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #C0E3FF;
+        border-radius: 5px;
+        background-color: #F8FBFF;
+    }
+
+    .section input:focus,
+    .section select:focus {
+        outline: none;
+        border-color: #015990;
+    }
+
+
+    .phone-section {
+            display: flex;
+            gap: 10px;
+        }
+
+        .phone-section select {
+            width: 30%;
+        }
+
+        .phone-section input {
+            width: 70%;
+        }
+
+        .otp-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .otp-section input {
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        .otp-section button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #025386;
+            color: #FFFFFF;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .password-section {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .password-box {
+            margin-bottom: 15px;
+            
+        }
+
+        .captcha-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+.password-box input{
+    padding: 10px;
+}
+
+
+
+        .next-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #025386;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .sign-up-section {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .otp-section button {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            .next-btn {
+                font-size: 14px;
+            }
+            .password-box input{
+    padding: 0px;
+}
+.otp-section input {
+            flex-grow: 1;
+            padding: 0px;
+        }
+        }
+    </style>
+</html>

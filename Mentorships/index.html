@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exameets</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="top-line">
+            <p>...Exameets is a one-step platform for students, where all the needs are met...</p>
+        </div>
+
+        <div class="logo-menu">
+            <div class="logo">
+                <img src="../Images/logo.jpg" alt="Exameets Logo">
+            </div>
+            <!-- Hamburger Icon (visible only on mobile) -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Close Icon (visible only when mobile menu is open) -->
+            <div class="close-menu" id="closeMenu" style="display: none;">&times;</div>
+            <!-- Main Navigation -->
+            <nav class="menu" id="menu">
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Home_Icon.svg" alt="Home"></div>
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="menu-item govt-job-container">
+                    <div class="icon-circle"><img src="../Images/Govt_Icon.svg" alt="Govt Jobs"></div>
+                    <a href="#">Govt Jobs</a>
+                    <div class="dropdown">
+                        <a href="../Govt_Jobs_Page/index.html">Govt Jobs</a>
+                        <a href="../Admit_Card/index.html">Admit Card</a>
+                        <a href="../Result_Page/index.html">Result</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Tech_Icon.svg" alt="Tech Jobs"></div>
+                    <a href="../Tech_Jobs_Page/index.html">Tech Jobs</a>
+                </div>
+                <div class="menu-item internship-container">
+                    <div class="icon-circle"><img src="../Images/Intern_Icon.svg" alt="Internships"></div>
+                    <a href="#">Internships</a>
+                    <div class="dropdown">
+                        <a href="../Internships_Page/index.html">Internships</a>
+                        <a href="../Scholarships_Page/">Scholarships</a>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Admission_Icon.svg" alt="Admissions"></div>
+                    <a href="../Admissions_Page/index.html">Admissions</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/PYQ_Icon.svg" alt="PYQ"></div>
+                    <a href="../PYQ_Page/index.html">PYQ</a>
+                </div>
+                <div class="menu-item"><div class="icon-circle"><img src="../Images/Courses_Icon.svg" alt="Courses"></div>
+                    <a href="../Mentorships/index.html">Mentorship</a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="bottom-line">
+            <p>Register to get the notifications you need </p>
+            <div class="auth-links">
+                <a href="#" id="loginLink">Login</a>
+                <span class="thick-line">|</span>
+                <a href="../Sign-Up_Page-2/index.html">Register</a>
+            </div>
+        </div>
+
+
+    </header>
+
+
+
+    <style>
+      .body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #DFF1FF;
+        color: #000000;
+        position: relative;
+      }
+  
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+      }
+  
+      .left, .middle, .right {
+        background-color: #FFFFFF;
+        border: 1px solid #C0E3FF;
+        padding: 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .tile{
+        max-height: 250px;
+      }
+  
+      .left {
+        flex: 1;
+        max-width: 400px;
+      }
+  
+      .middle {
+        flex: 2;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+      }
+  p,ul{
+    font-size: 18px;
+    line-height: 30px;
+  }
+  li{
+    font-size: 16px;
+    line-height: 30px;
+  }
+      .right {
+        flex: 1;
+        max-width: 300px;
+      }
+  
+      .profile-section {
+        margin-bottom: 20px;
+      }
+  
+      .profile-section h3 {
+        color: #015990;
+      }
+
+      .tile, .appointment {
+      background-color: #DFF1FF;
+      border: 1px solid #C0E3FF;
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tile button{
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #015990;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .tile button:hover {
+      background-color: #283D50;
+    }
+
+    .appointment {
+      margin-bottom: 10px;
+    }
+h3{
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 22px;
+}
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .middle, .right {
+        max-width: 100%;
+        flex: 1 1 auto;
+      }
+
+      .middle {
+        grid-template-columns: 1fr;
+      }
+    }
+    .toggle-button {
+    background-color: #015990;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-top: 20px; /* Remove any top margin */
+}
+
+  </style>
+</head>
+<div class="body">
+  
+
+  <div class="container">
+    <div class="left">
+      <div class="profile-section">
+        <h3>Your Profile</h3>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Qualification:</strong> PhD in Computer Science</p>
+        <p><strong>Designation:</strong> Senior Mentor</p>
+        <p><strong>Areas of Interest:</strong> AI, ML, Cloud Computing</p>
+        <p><strong>Skills:</strong> Python, JavaScript, Azure</p>
+        <p><strong>Availability:</strong></p>
+        <ul>
+          <li><strong>Days:</strong> Monday to Friday</li>
+          <li><strong>Time:</strong> 6 PM - 9 PM</li>
+        </ul>
+        <p><strong>Payment:</strong> Free / ₹100 per hour</p>
+        <a href="index2.html">
+          <button class="toggle-button">Switch to Mentee</button>
+        </a>
+        
+      </div>
+    </div>
+
+    <div class="middle">
+      <div class="tile">
+        <p><strong>Name:</strong> Alice</p>
+        <p><strong>Qualification:</strong> B.Tech</p>
+        <p><strong>Date:</strong> 29th Nov</p>
+        <p><strong>Time:</strong> 7 PM</p>
+        <button>Approve</button>
+        <button>Deny</button>
+      </div>
+      
+      <div class="tile">
+        <p><strong>Name:</strong> Bob</p>
+        <p><strong>Qualification:</strong> MBA</p>
+        <p><strong>Date:</strong> 30th Nov</p>
+        <p><strong>Time:</strong> 6 PM</p>
+        <button>Approve</button>
+        <button>Deny</button>
+      </div>
+      <div class="tile">
+        <p><strong>Name:</strong> Charlie</p>
+        <p><strong>Qualification:</strong> MSc</p>
+        <p><strong>Date:</strong> 1st Dec</p>
+        <p><strong>Time:</strong> 8 PM</p>
+        <button>Approve</button>
+        <button>Deny</button>
+      </div>
+      
+      
+      
+
+      
+      
+    </div>
+
+    <div class="right">
+      <h3>Upcoming Approved Appointments</h3>
+      <div class="appointment">
+        <p><strong>Name:</strong> Alice</p>
+        <p><strong>Time:</strong> 7 PM</p>
+      </div>
+      <div class="appointment">
+        <p><strong>Name:</strong> Bob</p>
+        <p><strong>Time:</strong> 6 PM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Modal for Login -->
+<div id="loginModal" class="modal1">
+    <div class="modal1-content">
+      <h2 class="welcome-message">Hi Dear, Welcome back</h2>
+      <input type="email" id="email" name="email" placeholder="Email" class="input-field" required><br>
+      <input type="password" id="password" name="password" placeholder="Password" class="input-field" required><br>
+      <a href="#" class="forgot-password">Forgot Password?</a><br>
+      <button id="loginBtn" class="login-btn">Login</button>
+    </div>
+  </div>
+  
+        <footer>
+            <div class="footer-container">
+
+                <div class="footer-title">
+                    <h1>Exameets</h1>
+                </div>
+    
+
+                <div class="footer-links">
+                    <a href="../Contact-Us/index.html">Contact Us</a> | 
+                    <a href="../About-Us/index.html">About Us</a> | 
+                    <a href="../Community/index.html">Community</a> | 
+                    <a href="../Privacy-Policy/index.html">Privacy Policy</a> | 
+                    <a href="../Our Team_Page/index.html">Our Team</a>
+                </div>
+    
+
+                <div class="footer-bottom">
+                    <div class="left-side">
+                        <p>&copy; 2024 Exameets. All Rights Reserved.</p>
+                    </div>
+                    <div class="middle-side">
+                        <p>Developed in Partnership with Ceeras</p>
+                    </div>
+                    <div class="right-side">
+                        <a href="#"><img src="../Images/WhatsApp_Icon.svg" alt="WAPP"></a>
+                        <a href="#"><img src="../Images/Facebook_Icon.svg" alt="FBOOK"></a>
+                        <a href="#"><img src="../Images/Instagram_Icon.svg" alt="IGRAM"></a>
+                        <a href="#"><img src="../Images/X_Twitter_Icon.svg" alt="X"></a>
+                        <a href="#"><img src="../Images/Linkedin_Icon.svg" alt="L"></a>
+                    </div>
+                </div>
+    
+
+                <div class="footer-quotes">
+                    <marquee behavior="scroll" direction="left">
+                        Success is not final, Failure is not final, It is the courage to continue that counts | 
+                        Success is not final, Failure is not final, It is the courage to continue that counts |
+                        Keep pushing forward, no matter the obstacles...
+                    </marquee>
+                </div>
+            </div>
+        </footer>
+        
+
+        <!-- Script for Mobile Menu Toggle -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+  const closeMenu = document.getElementById('closeMenu');
+  
+  hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+      hamburger.style.display = 'none';
+      closeMenu.style.display = 'block';
+  });
+  
+  closeMenu.addEventListener('click', () => {
+      menu.classList.remove('show');
+      hamburger.style.display = 'flex';
+      closeMenu.style.display = 'none';
+  });
+  
+  document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target) && event.target !== hamburger) {
+          menu.classList.remove('show');
+          hamburger.style.display = 'flex';
+          closeMenu.style.display = 'none';
+      }
+  });
+          </script>
+            
+        <!-- Script for Login Form Modal -->
+        <script>
+            var loginModal = document.getElementById("loginModal");
+
+
+            var loginLink = document.getElementById("loginLink");
+
+            loginLink.onclick = function() {
+                loginModal.style.display = "block";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == loginModal) {
+                    loginModal.style.display = "none";
+                }
+            }
+        </script>
+
+
+
+
+
+
+
+
+        
+</body>
+</html>
